@@ -14,7 +14,7 @@ struct MealRecipeView: View {
     var body: some View {
         
         ContentView(viewModel: viewModel) { mealRecipe in
-            ScrollView {
+            ScrollView() {
                 VStack(spacing: Constants.Padding.double) {
                     LeftAlignedTextView(
                         text: mealRecipe.name,
