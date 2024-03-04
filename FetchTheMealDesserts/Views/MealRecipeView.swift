@@ -26,7 +26,7 @@ struct MealRecipeView: View {
                                 text: Constants.Strings.ingredientsHeader,
                                 style: .subHeader
                             )
-                            ForEach(viewModel.measuredIngredient(for: mealRecipe), id: \.self) { item in
+                            ForEach(Array(viewModel.measuredIngredient(for: mealRecipe).enumerated()), id: \.offset) { index, item in
                                 LeftAlignedTextView(
                                     text: item,
                                     style: .regular
